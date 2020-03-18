@@ -1,0 +1,71 @@
+
+Showing logs for build [32mcb-kubecd-environment-pr-184-26-dbsv7-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lnm4n[0m
+{"level":"warn","ts":1584519794.6558921,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584519794.6564472,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-environment-pr-184-26-dbsv7-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-p6hb9[0m
+{"level":"warn","ts":1584519795.6804292,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584519795.6818888,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-environment-pr-184-26-dbsv7-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-184-26-dbsv7-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-environment-pr-184-26-dbsv7-2gcrs[0m
+{"level":"warn","ts":1584519802.1182337,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584519803.2232704,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-184-26-boot-gke-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-environment-pr-184-26-dbsv7-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:89c9c7eb7e0cdc5db5483da88087f4af331583f0,8:9b36d318e777b859981fa0f7babbc91b19f4f936
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 9b36d318e777b859981fa0f7babbc91b19f4f936: 89c9c7eb7e0cdc5db5483da88087f4af331583f0:
+DEBUG: ran git fetch --unshallow origin 9b36d318e777b859981fa0f7babbc91b19f4f936: 89c9c7eb7e0cdc5db5483da88087f4af331583f0: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 89c9c7eb7e0cdc5db5483da88087f4af331583f0
+DEBUG: ran git reset --hard 89c9c7eb7e0cdc5db5483da88087f4af331583f0 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git merge 9b36d318e777b859981fa0f7babbc91b19f4f936
+DEBUG: ran git merge 9b36d318e777b859981fa0f7babbc91b19f4f936 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 89c9c7eb7e0cdc5db5483da88087f4af331583f0..HEAD
+
+Showing logs for build [32mcb-kubecd-environment-pr-184-26-dbsv7-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Vault ingress is not present for '**-vault-pr-184-26-boo'
+It appears like you're attempting to access vault locally but the cluster isn't exposing Vault (which is good)
+Execute the following in another terminal window:
+
+	kubectl port-forward -n ** **-vault-pr-184-26-boo-0 8200:8200
+Then execute the following:
+
+	LOCAL_VAULT_ADDR=http://localhost:8200 ** get vault-config
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Vault ingress is not present for '**-vault-pr-184-26-boo'
+It appears like you're attempting to access vault locally but the cluster isn't exposing Vault (which is good)
+Execute the following in another terminal window:
+
+	kubectl port-forward -n ** **-vault-pr-184-26-boo-0 8200:8200
+Then execute the following:
+
+	LOCAL_VAULT_ADDR=http://localhost:8200 ** get vault-config
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Vault ingress is not present for '**-vault-pr-184-26-boo'
+It appears like you're attempting to access vault locally but the cluster isn't exposing Vault (which is good)
+Execute the following in another terminal window:
+
+	kubectl port-forward -n ** **-vault-pr-184-26-boo-0 8200:8200
+Then execute the following:
+
+	LOCAL_VAULT_ADDR=http://localhost:8200 ** get vault-config
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Vault ingress is not present for '**-vault-pr-184-26-boo'
+It appears like you're attempting to access vault locally but the cluster isn't exposing Vault (which is good)
+Execute the following in another terminal window:
+
+	kubectl port-forward -n ** **-vault-pr-184-26-boo-0 8200:8200
+Then execute the following:
+
+	LOCAL_VAULT_ADDR=http://localhost:8200 ** get vault-config
